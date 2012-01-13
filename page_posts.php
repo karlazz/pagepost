@@ -6,7 +6,7 @@
  */
 /*
 Plugin Name: PagePost
-Plugin URI: http://www.karlakarla.com
+Plugin URI: http://www.techliminal.com
 Description: This will put posts on a page that has its own text.  It is a shortcode pagepost with num=,cat=,order=,orderby= for arguments
 Author: Karla Leibowitz
 Version: 1
@@ -23,13 +23,14 @@ function pp_list($atts, $content = null) {
         extract(shortcode_atts(array(
                 "num" => '1',
                 "cat" => '',
-				"tag" => '',
+                "cat_name" => '',
+                "tag" => '',
                 "orderby" => 'post_date',
                 "order" => 'DESC'
         ), $atts));
         global $post;
         
-        $myposts = get_posts('numberposts='.$num.'&order='.$order.'&orderby='.$orderby.'&category='.$cat.'&tag='.$tag);
+        $myposts = get_posts('numberposts='.$num.'&order='.$order.'&orderby='.$orderby.'&category='.$cat.'&category_name='.$cat_name.'&tag='.$tag);
         $retour='<ul class="pageposts pageposts'.$cat.'">';
         foreach($myposts as $post) :
                 setup_postdata($post);
