@@ -6,7 +6,7 @@
  */
 /*
 Plugin Name: PagePost
-Plugin URI: http://www.techliminal.com
+Plugin URI: http://www.karlakarla.com
 Description: This will put posts on a page that has its own text.  It is a shortcode pagepost with num=,cat=,order=,orderby= for arguments
 Author: Karla Leibowitz
 Version: 1
